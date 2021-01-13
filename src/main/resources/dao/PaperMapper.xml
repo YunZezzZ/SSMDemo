@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yaoyuec.demo.dao.PaperMapper">
+    <resultMap id="paperResult" type="com.yaoyuec.demo.entity.Paper">
+        <!--column代表数据库字段，property为实体类字段-->
+        <id column="paper_id" property="paperId"/>
+        <id column="name" property="name"/>
+        <id column="number" property="number"/>
+        <id column="detail" property="detail"/>
+    </resultMap>
+
+    <select id="getPaperInfo" resultMap="paperResult">
+        select * from paper;
+    </select>
+
+</mapper>
